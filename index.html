@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="retro">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,31 +7,59 @@
   <link rel="stylesheet" href="style.css">
   <title>Moogle API Test</title>
 </head>
-<body>
+<body class="flex flex-col">
+
   <h1>MoogleAPI</h1>
-  <form action="">
-    <input type="text" name="" id="getInfoInput">
-    <input id="button" type="button" value="Submit">
-  </form>
-  <button id="randomButton">Random?</button>
+
+  <section>
+    <form action="">
+      <input type="text" placeholder="Type here" class="input input-bordered input-primary w-full max-w-xs"id="getInfoInput" >
+      <input id="button" class="btn" type="button" value="Submit">
+    </form>
+    <button id="randomButton" class="btn btn-secondary">Random</button>
+  </section>
+
+
+
+
+  <section class="w-full h-50 flex ">
+    <div class="w-1/2">
+      <h2 class="text-3xl text-bold" id="third-Spot"></h2> 
+      <img  id="third-Img"src="" alt="2">
+    </div>
+    <div class="w-1/2">
+      <p id="descChoice"></p>
+    </div>
+  </section>
+
+  <section class="w-full h-50 flex ">
+    <div class="w-1/2">
+      <h2 class="text-3xl text-bold" id="second-Spot"></h2>
+      <img  id="second-Img" src="" alt="1">
+    </div>
+    <div class="w-1/2">
+      <p id="descRandom"></p>
+    </div>
+  </section>
+
 
   <h2 id="first-Spot"></h2>
   <img id="first-Img"src="" alt="">
 
-  <h2 id="second-Spot"></h2>
-  <img id="second-Img"src="" alt="">
+ 
 
-  <h2 id="third-Spot"></h2> 
-  <img id="third-Img"src="" alt="">
+
   
 
 
+  <section class="w-full max-w-fit">
+    <div>
+      <ul id="unOrdered" class="flex space-x-4 ">
 
-  <div>
-    <ul class="unOrdered">
+      </ul>
+    </div>
+    <script src="index.js"></script>
+  </section>
 
-    </ul>
-  </div>
-  <script src="index.js"></script>
 </body>
 </html>
