@@ -4,17 +4,16 @@ let url1 = `https://www.moogleapi.com/api/v1/characters/search?name=`
 document.querySelector('#button').addEventListener('click', getChoice)
 document.querySelector('#randomButton').addEventListener('click', getRandom)
 
-function getChoice() {
+async function getChoice() {
 
   let inputName = document.getElementById("getInfoInput").value.toLowerCase()
   let resultContainer = document.getElementById("third-Spot")
   let descChoice = document.querySelector('#descChoice')
-  fetch(url1)
-      .then(res => res.json()) 
-      .then(data => {
+  
+  try {
+    const res => await fetch(url1)
+    const data = await res.json()
         console.log(data)
-
-        
 
         let matchedCharacter = data.find(character => character.name.toLowerCase() === inputName);
 
@@ -39,13 +38,11 @@ function getChoice() {
         let listItem = document.createElement('li')
         listItem.textContent = name
         unOrdered.appendChild(listItem)
-
-        
       })
       })
-      .catch(err => {
+    } catch(err => {
           console.log(`error ${err}`)
-      });
+    });
     
 }
 
