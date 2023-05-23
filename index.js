@@ -5,13 +5,13 @@ document.querySelector('#button').addEventListener('click', getChoice)
 document.querySelector('#randomButton').addEventListener('click', getRandom)
 
 async function getChoice() {
-
+  try {
   let inputName = document.getElementById("getInfoInput").value.toLowerCase()
   let resultContainer = document.getElementById("third-Spot")
   let descChoice = document.querySelector('#descChoice')
   
-  try {
-    const res => await fetch(url1)
+
+    const res = await fetch(url1)
     const data = await res.json()
         console.log(data)
 
