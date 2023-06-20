@@ -8,73 +8,56 @@
   <title>Moogle API Test</title>
 </head>
 <body class="flex flex-col w-full">
-
-  <div class="navbar bg-base-100">
+  <!--Nav Section-->
+  <div class="navbar bg-base-200">
     <a class="btn btn-ghost normal-case text-xl">MoogleAPI</a>
   </div>
 
-  <section class="flex flex-col">
-    <section class="w-full h-50 flex ">
-      <div class="w-1/2">
-        <h2 class="text-3xl text-bold" id="third-Spot"></h2> 
-        <img  id="third-Img"src="" alt="2">
-      </div>
-      <div class="w-1/2">
-        <p id="descChoice"></p>
-      </div>
-    </section>
-    <section class="w-full h-50 flex ">
-      <div class="w-1/2">
-        <h2 class="text-3xl text-bold" id="second-Spot"></h2>
-        <img  id="second-Img" src="" alt="1">
-      </div>
-      <div class="w-1/2">
-        <p id="descRandom"></p>
-      </div>
-    </section>
-  </section>
+  <section class="flex flex-row w-full h-50 mb-5">
 
-
-  <section class="w-full">
-    <div class="flex  w-full lg:flex-row mx-5">
-
-      <div class="flex  justify-items-center flex-grow h-32 card bg-base-300 rounded-box ">
-        <form action="">
+    <section class="w-1/2 max-h-50 flex flex-col">
+      <section class="flex">
+        <div class="w-1/2 m-5">
+          <h2 class="text-3xl text-bold mb-2" id="third-Spot"></h2> 
+          <img  id="third-Img" class="max-h-full"src="./img/chocobo.png" alt="1">
+        </div>
+        <div class="w-1/2 h-5/6 m-5 leading-8 overflow-auto max-h-300px">
+          <p id="descChoice"></p>
+        </div>
+      </section>
+      <div class="flex  justify-center content-center  h-32 card bg-base-300 rounded-box mx-5 ">
+        <form action="" class="flex justify-center content-center w-full">
           <input type="text" placeholder="Type here" class="input input-bordered input-primary w-4/5 max-w-xs"id="getInfoInput" >
-          <input id="button" class="btn w-1/2" type="button" value="Submit">
+          <input id="button" class="btn w-1/5 ml-2" type="button" value="Submit">
         </form>
       </div> 
-  
-      <div class="divider lg:divider-horizontal">OR</div> 
-  
-      <div class="grid flex-grow h-32 card bg-base-300 rounded-box place-items-center ">
-        <button id="randomButton" class="btn btn-secondary">Random</button>
+    </section>
+
+    <section class="w-1/2 h-50 flex flex-col">
+      <section class="flex">
+        <div class="w-1/2 m-5">
+          <h2 class="text-3xl text-bold mb-2" id="second-Spot"></h2>
+          <img  id="second-Img" class="max-h-full"src="./img/chocobo.png" alt="2">
+        </div>
+        <div class="w-1/2  m-5 leading-8 overflow-auto max-h-300px min-h-200px">
+          <p id="descRandom"></p>
+        </div>
+      </section>
+      <div class="flex justify-center content-center  h-32 card bg-base-300 rounded-box place-items-center mx-5">
+        <button id="randomButton" class="btn btn-secondary w-1/3">Random</button>
       </div>
-  
-    </div>
+    </section>
+
   </section>
   
 
 
-
-
-
-
-
-
-
-  <h2 id="first-Spot"></h2>
-  <img id="first-Img"src="" alt="">
-
- 
-
-
   
 
 
-  <section class="w-full max-w-fit">
+  <section class="w-full max-w-full">
     <div>
-      <ul id="unOrdered" class="flex space-x-4 ">
+      <ul id="unOrdered" class="ml-4 flex flex-col flex-wrap ">
 
       </ul>
     </div>

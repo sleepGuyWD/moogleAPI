@@ -39,11 +39,11 @@ async function getChoice() {
         listItem.textContent = name
         unOrdered.appendChild(listItem)
       })
-      })
-    } catch(err => {
-          console.log(`error ${err}`)
-    });
-    
+      }
+      catch(err)  {
+        console.log(`error ${err}`)
+      }
+  
 }
 
 function getRandom() {
